@@ -21,7 +21,7 @@ Users can only read/write their own data:
   - Easy: 1-digit numbers, 3 terms
   - Medium: 2-digit numbers, 5 terms
   - Hard: 2-digit numbers, 7 terms
-
+  - Custom: 
 ---
 
 ## 📊 Firestore Schema
@@ -31,7 +31,10 @@ students/{uid}
   name: string    (name provided by Google Authentication)
   email: string   (email provided by Google Authentication)
   age: number     (age of user using the website)
-  createdAt: timestamp   (timestamp of accepting privacy notice)
+  consentGiven:      (whether privacy policy is read and consent given) users not allowed to login if false 
+  consentTimestamp:     (local time stamp of consent)
+  consentVersion:   (privacy policy version changes)
+  createdAt: timestamp   (firebase server timestamp of accepting privacy notice)
 
 scores/{uid}/trials/{trialId}
   count: number          (how many numbers were shown)
@@ -41,4 +44,6 @@ scores/{uid}/trials/{trialId}
   actualAnswer: number
   duration: number       (seconds)
   timestamp: timestamp
+  numbers: space separate string of numbers with sign ("+17 +81 +68 -89 -26 +59 +27 +2")
+
 ```
