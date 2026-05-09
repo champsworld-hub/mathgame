@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Number Ninja 🥷</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f7ff;
+      --surface: #ffffff;
+      --surface2: #eef1ff;
+      --border: #d8deff;
+      --accent: #4f46e5;
+      --accent2: #7c3aed;
+      --accent3: #0ea5e9;
+      --green: #10b981;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --text: #1e1b4b;
+      --text2: #4b5563;
+      --text3: #9ca3af;
+      --shadow: 0 4px 24px rgba(79,70,229,0.10);
+      --radius: 16px;
+    }
+
+    body {
+      font-family: 'Sora', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 60%, #0ea5e9 100%);
+      padding: 56px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-emoji {
+      font-size: 3.5rem;
+      display: block;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .hero h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-top: 16px;
+      backdrop-filter: blur(8px);
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 760px;
+      margin: -40px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* ── Quick Summary Cards ── */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .summary-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .summary-card .icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .summary-card h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .summary-card p {
+      font-size: 0.82rem;
+      color: var(--text2);
+      line-height: 1.5;
+    }
+
+    /* ── Section Card ── */
+    .card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 28px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .card-num {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 0.85rem;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .card h2 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .card p {
+      color: var(--text2);
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+    }
+    .card p:last-child { margin-bottom: 0; }
+
+    /* ── Data Table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin: 4px 0 12px;
+    }
+    .data-table th {
+      background: var(--surface2);
+      color: var(--accent);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 2px solid var(--border);
+    }
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text2);
+      vertical-align: top;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: var(--surface2); }
+    .tag {
+      display: inline-block;
+      background: #ede9fe;
+      color: var(--accent2);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
+    /* ── Never List ── */
+    .never-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .never-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      color: #991b1b;
+      font-weight: 600;
+    }
+    .never-list li::before {
+      content: '✕';
+      background: var(--red);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 900;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ── Rights List ── */
+    .rights-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .rights-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: var(--text2);
+    }
+    .rights-list li .dot {
+      width: 22px;
+      height: 22px;
+      background: linear-gradient(135deg, var(--green), #059669);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: #fff;
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── Third Party ── */
+    .third-party-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .third-party-item:last-child { margin-bottom: 0; }
+    .third-party-item .tp-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+    .third-party-item h4 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .third-party-item p {
+      font-size: 0.84rem;
+      color: var(--text2);
+      margin: 0;
+    }
+    .third-party-item a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .third-party-item a:hover { text-decoration: underline; }
+
+    /* ── Security Badges ── */
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .security-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      color: #166534;
+      font-weight: 600;
+    }
+    .security-item::before {
+      content: '✓';
+      background: var(--green);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 900;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ── Contact Card ── */
+    .contact-card {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+    .contact-card h2 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .contact-card p {
+      opacity: 0.85;
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+    .contact-card a {
+      display: inline-block;
+      background: #fff;
+      color: var(--accent);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 10px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .contact-card a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 0 20px 40px;
+      color: var(--text3);
+      font-size: 0.82rem;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 540px) {
+      .card { padding: 20px 16px; }
+      .hero { padding: 44px 20px 70px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <span class="hero-emoji">🥷</span>
+    <h1>Privacy Policy</h1>
+    <p>Number Ninja — Math Game for Kids</p>
+    <div class="badge">🛡️ Last updated: May 2026</div>
+  </div>
+
+  <div class="container">
+
+    <!-- Quick Summary -->
+    <div class="summary-grid">
+      <div class="summary-card">
+        <span class="icon">👨‍👩‍👧</span>
+        <div>
+          <h3>Parent Account</h3>
+          <p>Sign-in is via Google only. We receive your name &amp; email from Google.</p>
+        </div>
+      </div>
+      <div class="summary-card">
+        <span class="icon">🎮</span>
+        <div>
+          <h3>Child Data</h3>
+          <p>Only age &amp; game scores stored — to track progress &amp; benchmark peers.</p>
+        </div>
+      </div>
+      <div class="summary-card">
+        <span class="icon">🚫</span>
+        <div>
+          <h3>No Ads. No Selling.</h3>
+          <p>Your data is never sold, shared, or used for advertising. Ever.</p>
+        </div>
+      </div>
+      <div class="summary-card">
+        <span class="icon">🔓</span>
+        <div>
+          <h3>Open Source</h3>
+          <p>Our entire site code is publicly auditable on GitHub.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. Who We Are -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-num">1</div>
+        <h2>Who We Are</h2>
+      </div>
+      <p>
+        Number Ninja is a free educational math game designed to help children practise
+        mental arithmetic. It is operated by <strong>[Ankita Agarwal / ChampsWorld]</strong>
+        and hosted on GitHub Pages (Microsoft infrastructure) with data stored on
+        Google Firebase.
+      </p>
+      <p>
+        Our source code is fully open and publicly auditable at
+        <a href="https://github.com/champsworld-hub/mathgame" style="color:var(--accent);font-weight:600;">
+          github.com/champsworld-hub/mathgame
+        </a> — anyone can verify exactly what our site does.
+      </p>
+    </div>
+
+    <!-- 2. What We Collect -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-num">2</div>
+        <h2>What Data We Collect</h2>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Source</th>
+            <th>Why We Need It</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Parent name</strong></td>
+            <td><span class="tag">Google Sign-In</span></td>
+            <td>Display &amp; account identification</td>
+          </tr>
+          <tr>
+            <td><strong>Parent email</strong></td>
+            <td><span class="tag">Google Sign-In</span></td>
+            <td>Unique account ID + data archival communications</td>
+          </tr>
+          <tr>
+            <td><strong>Child's age</strong></td>
+            <td><span class="tag">You enter it</span></td>
+            <td>Benchmark your child's scores against age-group peers</td>
+          </tr>
+          <tr>
+            <td><strong>Game scores &amp; history</strong></td>
+            <td><span class="tag">Game activity</span></td>
+            <td>Progress tracking &amp; mistake review</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        We do <strong>not</strong> collect passwords, location, device identifiers,
+        browser fingerprints, cookies for tracking, or any other personal information.
+      </p>
+    </div>
+
+    <!-- 3. How We Use It -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-num">3</div>
+        <h2>How We Use Your Data</h2>
+      </div>
+      <ul class="rights-list">
+        <li><span class="dot">✓</span> Show your child their own scores, history, and mistakes to learn from</li>
+        <li><span class="dot">✓</span> Compare performance anonymously within age groups</li>
+        <li><span class="dot">✓</span> Email parents before archiving or deleting old inactive data</li>
+        <li><span class="dot">✓</span> Notify parents if their child has not used the app for an extended period</li>
+      </ul>
+    </div>
+
+    <!-- 4. What We Never Do -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-num">4</div>
+        <h2>What We Never Do</h2>
+      </div>
+      <ul class="never-list">
+        <li>Sell your data</li>
+        <li>Show ads</li>
+        <li>Track your browser</li>
+        <li>Share with third parties</li>
+        <li>Mine cryptocurrency</li>
+        <li>Fingerprint your device</li>
+      </ul>
+    </div>
+
+    <!-- 5. Third Party Services -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-num">5</div>
+        <h2>Third-Party Services</h2>
+      </div>
+      <div class="third-party-item">
+        <span class="tp-icon">🔐</span>
+        <div>
+          <h4>Google Sign-In</h4>
+          <p>Handles all authentication. We never see or store your password.
+          <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy →</a></p>
+        </div>
+      </div>
+      <div class="third-party-item">
+        <span class="tp-icon">🗄️</span>
+        <div>
+          <h4>Google Firebase</h4>
+          <p>Stores game data securely on Google's servers with strict access rules —
+          each family can only access their own data.
+          <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy →</a></p>
+        </div>
+      </div>
+      <div class="third-party-item">
+        <span class="tp-icon">🐙</span>
+        <div>
+          <h4>GitHub Pages</h4>
+          <p>Hosts our website on Microsoft/GitHub infrastructure with HTTPS enforced by default.
+          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank">GitHub Privacy →</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Children's Privacy -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-num">6</div>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>
+        Number Ninja is designed for children but is accessed through a
+        <strong>parent or guardian's Google account</strong>. By signing in and
+        entering a child's age, the parent or guardian confirms they have read this
+        policy and consent to the collection of their child's age and game activity
+        data as described above.
+      </p>
+      <p>
+        We do not knowingly collect data from children without parental involvement.
+        If you believe a child has used the app without parental consent, please
+        contact us immediately and we will delete the data.
+      </p>
+    </div>
+
+    <!-- 7. Data Retention -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-num">7</div>
+        <h2>Data Retention</h2>
+      </div>
+      <p>
+        We keep game data for as long as your account is active. If your account
+        has been <strong>inactive for 12 months</strong>, we will send an email
+        notification before permanently deleting your data. You may also request
+        deletion at any time (see Your Rights below).
+      </p>
+    </div>
+
+    <!-- 8. Your Rights -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-num">8</div>
+        <h2>Your Rights</h2>
+      </div>
+      <p>As a parent or guardian you can at any time:</p>
+      <ul class="rights-list">
+        <li><span class="dot">✓</span> <strong>Access</strong> — request a copy of all data we hold about your account</li>
+        <li><span class="dot">✓</span> <strong>Delete</strong> — remove all your data via Settings → Delete My Account, or by emailing us</li>
+        <li><span class="dot">✓</span> <strong>Correct</strong> — ask us to fix any inaccurate information</li>
+        <li><span class="dot">✓</span> <strong>Withdraw consent</strong> — delete your account at any time, which stops all data processing</li>
+      </ul>
+    </div>
+
+    <!-- 9. Security -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-num">9</div>
+        <h2>Security</h2>
+      </div>
+      <div class="security-grid">
+        <div class="security-item">HTTPS enforced</div>
+        <div class="security-item">Firebase access rules</div>
+        <div class="security-item">No server-side code</div>
+        <div class="security-item">Open source code</div>
+        <div class="security-item">Google Safe Browsing verified</div>
+        <div class="security-item">No third-party trackers</div>
+      </div>
+      <p style="margin-top:14px;">
+        Firebase security rules ensure each family can only access their own data.
+        Our complete site code is publicly auditable at
+        <a href="https://github.com/champsworld-hub/mathgame" style="color:var(--accent);font-weight:600;">
+          github.com/champsworld-hub/mathgame
+        </a>.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <h2>📬 Questions or Concerns?</h2>
+      <p>For any privacy questions, data requests, or to delete your account and data, reach out to us directly.</p>
+      <a href="mailto:your@email.com">Contact Us → champsworld-hub@googlegroups.com</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Number Ninja 🥷 &nbsp;·&nbsp; <a href="/">Back to Game</a> &nbsp;·&nbsp; <a href="https://github.com/champsworld-hub/mathgame" target="_blank">View Source on GitHub</a></p>
+  </footer>
+
+</body>
+</html>
