@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO ESSENTIALS ═══ -->
+  <title>How to Play Number Ninja – Complete User Guide | ChampsWorld Math Game</title>
+  <meta name="description" content="Learn how to play Number Ninja, the free mental math game by ChampsWorld. This guide covers Easy/Medium/Hard/Custom difficulty, abacus Level 1 practice, scoring, stats, history, and challenge mode." />
+  <meta name="keywords" content="Number Ninja guide, mental math game, ChampsWorld math, abacus math game, mental arithmetic practice, math for kids, number ninja how to play, abacus training game, math challenge game, champsworld number ninja" />
+  <meta name="author" content="ChampsWorld" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://champsworld-hub.github.io/mathgame/UserGuide.html" />
+
+  <!-- Open Graph (WhatsApp, Facebook previews) -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Play Number Ninja – Complete Guide" />
+  <meta property="og:description" content="Everything you need to know about Number Ninja: difficulties, abacus techniques, scoring, challenges and more." />
+  <meta property="og:url" content="https://champsworld-hub.github.io/mathgame/UserGuide.html" />
+  <meta property="og:site_name" content="ChampsWorld Number Ninja" />
+
+  <!-- Structured data: Google understands this is a SoftwareApplication guide -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "How to Play Number Ninja – Complete User Guide",
+    "description": "A beginner's guide to Number Ninja, the free browser-based mental math game by ChampsWorld. Covers difficulty levels, abacus techniques, scoring, stats, history and challenge mode.",
+    "author": { "@type": "Organization", "name": "ChampsWorld" },
+    "publisher": { "@type": "Organization", "name": "ChampsWorld" },
+    "datePublished": "2026-05-20",
+    "dateModified": "2026-05-20",
+    "mainEntityOfPage": "https://champsworld-hub.github.io/mathgame/UserGuide.html",
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Number Ninja",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "url": "https://champsworld-hub.github.io/mathgame/"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --brand:  #4a7cf7;
+      --green:  #22c07a;
+      --orange: #f7943a;
+      --purple: #8b5cf6;
+      --red:    #ef4444;
+      --yellow: #f6c93e;
+      --ink:    #1a1d2e;
+      --ink2:   #44475a;
+      --muted:  #7c8098;
+      --rule:   #e6e8f0;
+      --bg:     #f7f8fc;
+      --card:   #ffffff;
+      --r:      14px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--ink2);
+      font-size: 16.5px;
+      line-height: 1.75;
+    }
+
+    a { color: var(--brand); }
+
+    /* ── TOP NAV ── */
+    .topnav {
+      background: var(--card);
+      border-bottom: 1px solid var(--rule);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .topnav-brand {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--ink);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .topnav-links { display: flex; gap: 6px; flex-wrap: wrap; }
+    .topnav-links a {
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 13px;
+      border-radius: 100px;
+      text-decoration: none;
+      background: var(--bg);
+      color: var(--ink2);
+      border: 1px solid var(--rule);
+      transition: background .15s;
+    }
+    .topnav-links a:hover { background: #eef2ff; }
+    .topnav-links a.active {
+      background: var(--brand);
+      color: #fff;
+      border-color: var(--brand);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #1a1d2e 0%, #2d3561 100%);
+      color: #fff;
+      text-align: center;
+      padding: 70px 24px 60px;
+    }
+    .hero-label {
+      display: inline-block;
+      font-size: 12px; font-weight: 800;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5.5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    .hero h1 em { color: var(--yellow); font-style: normal; }
+    .hero p {
+      color: #b8bcda;
+      font-size: 1.05rem;
+      max-width: 540px;
+      margin: 0 auto 28px;
+    }
+    .pill-row {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+    }
+    .pill {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 13px; font-weight: 600;
+      color: #dde0f5;
+    }
+
+    /* ── LAYOUT ── */
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      padding: 28px 30px;
+      margin: 40px auto;
+    }
+    .toc-title {
+      font-size: 1rem; font-weight: 800;
+      color: var(--ink); margin-bottom: 14px;
+    }
+    .toc ol {
+      padding-left: 18px;
+      columns: 2; column-gap: 28px;
+    }
+    .toc li { font-size: 14.5px; padding: 2px 0; }
+    @media (max-width: 500px) { .toc ol { columns: 1; } }
+
+    /* ── SECTIONS ── */
+    .section {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      padding: 36px;
+      margin-bottom: 22px;
+      scroll-margin-top: 72px;
+    }
+    @media (max-width: 540px) { .section { padding: 24px 18px; } }
+
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    h3 {
+      font-size: 1rem; font-weight: 800;
+      color: var(--ink);
+      margin: 22px 0 8px;
+    }
+    p { color: var(--ink2); margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── DIFF CARDS ── */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 12px; margin-top: 18px;
+    }
+    .dc {
+      border-radius: 12px;
+      padding: 16px 15px;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .dc strong { display: block; font-size: .95rem; font-weight: 800; margin-bottom: 5px; color: var(--ink); }
+    .dc.easy   { background: #edfaf3; border: 2px solid #a8eacb; }
+    .dc.med    { background: #fffceb; border: 2px solid #fce98a; }
+    .dc.hard   { background: #fff2ed; border: 2px solid #fcc5ae; }
+    .dc.custom { background: #f3eeff; border: 2px solid #c4aef8; }
+
+    /* ── FEATURE LIST ── */
+    .flist { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 13px; margin-top: 14px; }
+    .flist li { display: flex; gap: 13px; align-items: flex-start; font-size: 15.5px; }
+    .ico {
+      flex-shrink: 0; width: 32px; height: 32px;
+      border-radius: 8px; display: grid; place-items: center;
+      font-size: 16px; line-height: 1;
+    }
+    .ico.b { background: #ddeeff; }
+    .ico.g { background: #ddfaee; }
+    .ico.o { background: #fff0dd; }
+    .ico.p { background: #ede8ff; }
+
+    /* ── TAB CHIPS ── */
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+    .tc {
+      border-radius: 100px; padding: 6px 16px;
+      font-size: 13.5px; font-weight: 700; border: 2px solid;
+    }
+    .tc.play   { background: #eef3ff; border-color: #adc2fb; color: #2a4fcf; }
+    .tc.level  { background: #fff4e8; border-color: #fcc880; color: #a05410; }
+    .tc.stats  { background: #edfaf3; border-color: #8ee8b6; color: #14834a; }
+    .tc.hist   { background: #fffceb; border-color: #fce98a; color: #7a6200; }
+    .tc.chal   { background: #f4eeff; border-color: #c4aef8; color: #5b2cc4; }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: #fffbea;
+      border-left: 4px solid var(--yellow);
+      border-radius: 0 10px 10px 0;
+      padding: 13px 17px;
+      font-size: 15px; color: #685010;
+      margin: 16px 0;
+    }
+    .callout strong { color: #5a3d00; }
+
+    /* ── LINK CARD (cross-links) ── */
+    .link-card {
+      display: flex; align-items: center; gap: 14px;
+      background: #f0f4ff;
+      border: 2px solid #c5d3fb;
+      border-radius: 12px;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: var(--ink2);
+      margin: 16px 0;
+      transition: background .15s;
+    }
+    .link-card:hover { background: #e2eaff; }
+    .link-card-icon { font-size: 26px; flex-shrink: 0; }
+    .link-card-text strong { display: block; color: var(--ink); font-size: 15.5px; }
+    .link-card-text span { font-size: 13.5px; color: var(--muted); }
+
+    /* ── FAQ ── */
+    .faq-item { border-top: 1px solid var(--rule); padding: 16px 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--rule); }
+    .faq-q { font-weight: 800; color: var(--ink); margin-bottom: 5px; font-size: 15.5px; }
+    .faq-a { font-size: 15px; color: var(--muted); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 44px 20px;
+      font-size: 14px;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+      margin-top: 10px;
+    }
+    footer .foot-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 10px; }
+    footer a { color: var(--brand); text-decoration: none; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<!-- ══════ TOP NAV ══════ -->
+<nav class="topnav">
+  <a class="topnav-brand" href="https://champsworld-hub.github.io/mathgame/">🥷 Number Ninja</a>
+  <div class="topnav-links">
+    <a href="https://champsworld-hub.github.io/mathgame/" >▶ Play</a>
+    <a href="UserGuide.html" class="active">📖 Guide</a>
+    <a href="ScoringGuide.html">🪙 Scoring</a>
+    <a href="privacy.html">🔒 Privacy</a>
+  </div>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<header class="hero">
+  <p class="hero-label">ChampsWorld · Complete Guide</p>
+  <h1>Master <em>Number Ninja</em><br>— the Mental Math Game</h1>
+  <p>Numbers flash one by one. Keep a running total in your head. Type your answer. Here's everything you need to become a champion.</p>
+  <div class="pill-row">
+    <span class="pill">🆓 Free to play</span>
+    <span class="pill">🧮 Abacus techniques</span>
+    <span class="pill">📊 Progress tracking</span>
+    <span class="pill">🏆 Live challenges</span>
+    <span class="pill">🌐 Works in any browser</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Contents">
+    <p class="toc-title">📖 What's in this guide</p>
+    <ol>
+      <li><a href="#what-is">What is Number Ninja?</a></li>
+      <li><a href="#how-to-play">How to play</a></li>
+      <li><a href="#difficulty">Difficulty levels</a></li>
+      <li><a href="#custom">Custom mode</a></li>
+      <li><a href="#level1">Level 1 – Abacus practice</a></li>
+      <li><a href="#stats">Stats tab</a></li>
+      <li><a href="#history">History tab</a></li>
+      <li><a href="#challenge">Challenge mode</a></li>
+      <li><a href="#settings">Settings</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <!-- 1 -->
+    <article class="section" id="what-is">
+      <h2 class="section-title">🧮 What is Number Ninja?</h2>
+      <p><strong>Number Ninja</strong> is a free, browser-based mental arithmetic game made by <strong>ChampsWorld</strong>. It trains the skill of holding a running total in your head as numbers appear one at a time on screen — exactly the mental workout used in competitive abacus (soroban) training.</p>
+      <p>The game is simple: numbers flash in sequence, you keep adding or subtracting as they appear, and at the end you type your answer. No pen. No calculator. Pure mental math.</p>
+      <p>It's designed for students, abacus learners, competitive math fans, and anyone who wants a sharper, faster brain. All you need is a Google account to sign in — the game itself is completely free.</p>
+    </article>
+
+    <!-- 2 -->
+    <article class="section" id="how-to-play">
+      <h2 class="section-title">🎮 How to Play</h2>
+      <p>Everything lives inside five tabs across the top of the screen:</p>
+      <div class="tabs">
+        <span class="tc play">🎮 Play</span>
+        <span class="tc level">🔢 Level 1</span>
+        <span class="tc stats">📊 Stats</span>
+        <span class="tc hist">📋 History</span>
+        <span class="tc chal">🏆 Challenge</span>
+      </div>
+
+      <h3>Step-by-step</h3>
+      <ul class="flist">
+        <li><span class="ico b">1️⃣</span><span>Go to <strong>Play</strong>, pick a difficulty (Easy / Medium / Hard / Custom), and tap <em>Start Game!</em></span></li>
+        <li><span class="ico b">2️⃣</span><span>Numbers appear <strong>one by one</strong>. Keep a running total in your head — add or subtract each new number as it arrives.</span></li>
+        <li><span class="ico g">3️⃣</span><span>After the last number, type your final total and submit. You'll see instantly if you're right and how many points you earned.</span></li>
+        <li><span class="ico o">4️⃣</span><span>Play more games to build streaks, climb your average score, and work towards harder levels.</span></li>
+      </ul>
+
+      <div class="callout">
+        <strong>💡 Window mode:</strong> In Settings you can turn on <em>Show all numbers</em>. This shows numbers in a <strong>sliding window of 5</strong> — you tap Next to advance through them. Good for beginners who want a little more time to look.
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="section" id="difficulty">
+      <h2 class="section-title">⭐ Difficulty Levels</h2>
+      <p>Choose your challenge on the Play screen. Difficulty controls how many numbers appear and how many digits each can have.</p>
+      <div class="diff-grid">
+        <div class="dc easy"><strong>⭐ Easy</strong>3 numbers<br>up to 1 digit each<br><em>(values 1–9)</em></div>
+        <div class="dc med"><strong>⭐⭐ Medium</strong>5 numbers<br>up to 2 digits each<br><em>(values 1–99)</em></div>
+        <div class="dc hard"><strong>⭐⭐⭐ Hard</strong>7 numbers<br>up to 2 digits each<br><em>(values 1–99)</em></div>
+        <div class="dc custom"><strong>⚙️ Custom</strong>You choose<br>digits &amp; row count<br><em>Manual or Auto</em></div>
+      </div>
+      <p style="margin-top:16px;">Start on <strong>Easy</strong> until you can answer consistently in under 5 seconds, then move to Medium. Each harder level gives a score multiplier — see the scoring guide below.</p>
+
+      <a class="link-card" href="ScoringGuide.html">
+        <span class="link-card-icon">🪙</span>
+        <span class="link-card-text">
+          <strong>How is my score calculated?</strong>
+          <span>Read the full Scoring Guide →</span>
+        </span>
+      </a>
+    </article>
+
+    <!-- 4 -->
+    <article class="section" id="custom">
+      <h2 class="section-title">⚙️ Custom Mode</h2>
+      <p>Custom gives you full control for targeted training sessions.</p>
+      <ul class="flist">
+        <li><span class="ico p">🔢</span><span><strong>Digits per number</strong> — slider from 1 digit (1–9) up to 8 digits. Use this to train huge-number addition.</span></li>
+        <li><span class="ico p">📋</span><span><strong>Number of rows</strong> — 2 terms up to 1010+. 20–50 rows makes for an intense workout session.</span></li>
+        <li><span class="ico o">✋</span><span><strong>Manual mode</strong> — you tap <em>Next</em> yourself to reveal each number. Best when learning a new technique.</span></li>
+        <li><span class="ico g">⏱️</span><span><strong>Auto mode</strong> — numbers advance automatically. Pick a speed: BG (Beginner) → LR → INT (Intermediate, 2 sec/number) → ADV → EX → 🥇 Champion.</span></li>
+        <li><span class="ico b">💾</span><span><strong>Save as preset</strong> — save your favourite config and reload it any time from the <em>Load a preset…</em> dropdown.</span></li>
+      </ul>
+    </article>
+
+    <!-- 5 -->
+    <article class="section" id="level1">
+      <h2 class="section-title">🔢 Level 1 – Abacus Technique Practice</h2>
+      <p>The <strong>Level 1</strong> tab drills the core abacus mental-math techniques one operation at a time, rather than random free-play.</p>
+
+      <h3>Operation types</h3>
+      <ul class="flist">
+        <li><span class="ico g">🟢</span><span><strong>Direct</strong> — straightforward addition with no boundary crossing. Start here.</span></li>
+        <li><span class="ico b">🔵</span><span><strong>+5s</strong> — adding numbers that cross the 5-bead boundary (e.g. +1 → remove 4, add 5).</span></li>
+        <li><span class="ico o">🟠</span><span><strong>−5s</strong> — subtracting across the 5-bead boundary (e.g. −1 → add 4, remove 5).</span></li>
+        <li><span class="ico p">🟣</span><span><strong>+10s</strong> — adding numbers that cross the 10-bead (decade) boundary.</span></li>
+        <li><span class="ico p">🔴</span><span><strong>−10s</strong> — subtracting across the decade boundary.</span></li>
+      </ul>
+      <p>Each type has sub-operations and shows a technique card with an explanation and memory tip. You also pick <strong>rows per question</strong> (2–7) to control how many numbers appear per round.</p>
+
+      <div class="callout">
+        <strong>💡 How to use Level 1:</strong> Drill with 2 rows on Manual mode until the technique feels automatic, then increase rows and switch to Auto → Intermediate speed (2 sec/number).
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="section" id="stats">
+      <h2 class="section-title">📊 Stats</h2>
+      <p>The <strong>Stats</strong> tab gives you a full picture of your progress over all games you've played.</p>
+      <ul class="flist">
+        <li><span class="ico g">✅</span><span><strong>Accuracy</strong> — percentage of questions you've answered correctly overall, shown as a ring chart.</span></li>
+        <li><span class="ico b">🏅</span><span><strong>Total score, Avg score, Best score</strong> — your all-time scoring summary.</span></li>
+        <li><span class="ico o">🔥</span><span><strong>Best streak</strong> — longest run of correct answers in a row.</span></li>
+        <li><span class="ico p">📊</span><span><strong>Accuracy by Difficulty</strong> — bar showing your hit rate at each difficulty (e.g. <em>1d·3n</em> = 1 digit, 3 numbers). Spot your weak points fast.</span></li>
+        <li><span class="ico g">📈</span><span><strong>Avg Score by Difficulty</strong> — compare performance across all difficulty levels.</span></li>
+      </ul>
+      <p>The difficulty label format is <strong>Xd · Yn</strong> — X digits per number, Y numbers per question. So <em>2d · 7n</em> is Hard mode.</p>
+    </article>
+
+    <!-- 7 -->
+    <article class="section" id="history">
+      <h2 class="section-title">📋 History</h2>
+      <p>Every game you play is saved and shown in the <strong>History</strong> tab, newest first. Each entry shows:</p>
+      <ul class="flist">
+        <li><span class="ico g">✅</span><span>Whether you were <strong>Correct</strong> or wrong, and the exact number sequence shown (e.g. <em>+8 +1 −4</em>).</span></li>
+        <li><span class="ico b">🔢</span><span>The <strong>correct answer</strong> and your answer — useful for reviewing mistakes.</span></li>
+        <li><span class="ico o">⏱️</span><span>How long you took, how many points you earned, and the difficulty setting.</span></li>
+      </ul>
+      <p>History is paginated (20 per page) and marked <strong style="color:#dc2626;">● Live</strong> — new games appear in real time without refreshing.</p>
+    </article>
+
+    <!-- 8 -->
+    <article class="section" id="challenge">
+      <h2 class="section-title">🏆 Challenge Mode</h2>
+      <p><strong>Challenges</strong> let you compete against other players — typically a class of students or a group of friends — on the same set of questions.</p>
+      <ul class="flist">
+        <li><span class="ico o">➕</span><span>Tap <strong>+</strong> to create a challenge, or enter a code (e.g. <em>NNJ-4X2K</em>) given to you by a teacher.</span></li>
+        <li><span class="ico g">✅</span><span>Complete the questions at your own pace. Accuracy and speed both count toward your score.</span></li>
+        <li><span class="ico p">🥈</span><span>After finishing, see your <strong>Rank</strong>, how many questions you got correct, and how many students participated.</span></li>
+        <li><span class="ico b">📋</span><span>Tap <strong>Past</strong> (top-right of the Challenge tab) to review all your previous challenge results.</span></li>
+      </ul>
+    </article>
+
+    <!-- 9 -->
+    <article class="section" id="settings">
+      <h2 class="section-title">⚙️ Settings</h2>
+      <p>Tap your profile avatar in the top-left corner to open Settings.</p>
+      <ul class="flist">
+        <li><span class="ico b">👤</span><span><strong>Nickname</strong> — the display name shown in the top-left during play. Your Google account name is stored separately and not editable here.</span></li>
+        <li><span class="ico g">📺</span><span><strong>Show all numbers (window mode)</strong> — when ON, numbers appear in a sliding window of 5 and you tap Next to advance. When OFF, numbers appear one by one on a timer.</span></li>
+        <li><span class="ico p">⭐</span><span><strong>Per-difficulty toggles</strong> — hide any difficulty tier (Easy / Medium / Hard / Custom) you don't want shown on the Play screen.</span></li>
+        <li><span class="ico o">💾</span><span><strong>Custom Training Presets</strong> — manage and rename your saved Custom configs. Tap <em>Show</em> to expand this section.</span></li>
+      </ul>
+    </article>
+
+    <!-- 10 -->
+    <article class="section" id="faq">
+      <h2 class="section-title">❓ FAQ</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">Is Number Ninja free?</p>
+        <p class="faq-a">Yes — completely free to play in any modern web browser. No download, no subscription, no ads.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Do I need an account?</p>
+        <p class="faq-a">You sign in with Google to save your stats, history, and presets. This is required — the game doesn't support guest play.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How is my score calculated?</p>
+        <p class="faq-a">Score depends on getting the answer right, how fast you answered, and the difficulty multiplier. A wrong answer always gives 0. See the <a href="ScoringGuide.html">Scoring Guide</a> for the full breakdown with an interactive calculator.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What does "1d · 3n" mean in Stats?</p>
+        <p class="faq-a"><em>d</em> = digits per number, <em>n</em> = number of numbers per question. So <strong>1d · 3n</strong> is Easy (3 one-digit numbers) and <strong>2d · 7n</strong> is Hard (7 two-digit numbers).</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What is the Level 1 tab for?</p>
+        <p class="faq-a">Level 1 teaches the specific abacus complement techniques (the mental shortcuts that make fast addition possible). If you're learning soroban or the Chinese abacus, start here before free-play.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What is Auto mode speed "INT"?</p>
+        <p class="faq-a">INT = Intermediate, which shows each number for 2 seconds before auto-advancing. It's a good daily-practice target. Faster speeds are ADV, EX, and Champion (🥇).</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How do I join a Challenge?</p>
+        <p class="faq-a">Go to the Challenge tab, type the code your teacher or friend gave you (format: XXX-XXXX), and tap <em>Join Challenge →</em>.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Does it work on mobile?</p>
+        <p class="faq-a">Yes — the game is fully responsive and works on smartphones and tablets in any browser.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Is my data private?</p>
+        <p class="faq-a">We only store your name, email (from Google), age, and game scores to track progress. No ads, no data selling. See the <a href="privacy.html">Privacy Policy</a> for full details.</p>
+      </div>
+
+    </article>
+
+  </main>
+</div>
+
+<!-- ══════ FOOTER ══════ -->
+<footer>
+  <div class="foot-links">
+    <a href="https://champsworld-hub.github.io/mathgame/">▶ Play Number Ninja</a>
+    <a href="ScoringGuide.html">🪙 Scoring Guide</a>
+    <a href="privacy.html">🔒 Privacy Policy</a>
+  </div>
+  <p>Made with 🥷 for ChampsWorld &nbsp;·&nbsp; Guide updated May 2026</p>
+</footer>
+
+</body>
+</html>
