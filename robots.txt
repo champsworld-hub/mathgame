@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://champsworld-hub.github.io/mathgame/sitemap.xml
